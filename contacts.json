@@ -1,0 +1,16 @@
+{
+    "contact": {
+      "firstName": "Erin",
+      "lastName": "Combs",
+      "email": "amazingperson@test.com",
+      "favoriteColor": "purple",
+      "birthday": "09/18/1994"
+    },
+    "contact2": {
+      "firstName": "Erin",
+      "lastName": "Combs",
+      "email": "amazingperson@test.com",
+      "favoriteColor": "purple",
+      "birthday": "09/18/1994"
+    }
+} 

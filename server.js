@@ -1,9 +1,26 @@
 const express = require('express');
+// to parse json data
+const bodyParser = require('body-parser');
+const mongodb = require('./db/connect');
+
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
+
+// Use body-parser middleware to parse JSON data
+app.use(bodyParser.json());
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 app.use('/', require('./Routes'))
 
-app.listen(port, () => {
-    console.log(`Running on port ${port}`)
-})
+mongodb.initDb((err, mongodb) => {
+    if (err) {
+      console.log(err);
+    } else {
+      app.listen(port);
+      console.log(`Connected to DB and listening on ${port}`);
+    }
+  });
