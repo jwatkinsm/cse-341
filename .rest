@@ -12,3 +12,13 @@ GET http://localhost:8080/Contacts/678c298d9c5387129f34ec0d
 GET http://localhost:8080/Contacts/678c29a29c5387129f34ec0e
 ###
 GET http://localhost:8080/Contacts/678c53ea9c5387129f34ec0f
+###
+GET https://cse-341-69ih.onrender.com
+###
+GET https://cse-341-69ih.onrender.com/Contacts
+###
+GET https://cse-341-69ih.onrender.com/Contacts/678c298d9c5387129f34ec0d
+###
+GET https://cse-341-69ih.onrender.com/Contacts/678c29a29c5387129f34ec0e
+###
+GET https://cse-341-69ih.onrender.com/Contacts/678c53ea9c5387129f34ec0f
