@@ -10,15 +10,67 @@ GET http://localhost:8080/Contacts/678c298d9c5387129f34ec0d
 ###
 //c2
 GET http://localhost:8080/Contacts/678c29a29c5387129f34ec0e
+//c3
 ###
 GET http://localhost:8080/Contacts/678c53ea9c5387129f34ec0f
 ###
-GET https://cse-341-69ih.onrender.com
+POST http://localhost:8080/Contacts HTTP/1.1
+content-type: application/json 
+
+{    
+    "firstName":"Ashley", 
+    "lastName":"Weaver", 
+    "email":"aWeaver@test.com", 
+    "favoriteColor":"Brown", 
+    "birthday":"06/19/2000"
+}
 ###
-GET https://cse-341-69ih.onrender.com/Contacts
+PUT http://localhost:8080/Contacts/679590a4c65149d22b79a229 HTTP/1.1
+content-type: application/json 
+
+{    
+    "firstName":"Ashley", 
+    "lastName":"Wilhelm", 
+    "email":"aWeaver@test.com", 
+    "favoriteColor":"Brown", 
+    "birthday":"06/19/2000"
+}
+###
+DELETE http://localhost:8080/Contacts/67958e61fb22af1831834aa0 HTTP/1.1
+###
+//Production
+
+GET https://cse-341-69ih.onrender.com HTTP/1.1
+###
+GET https://cse-341-69ih.onrender.com/Contacts HTTP/1.1
 ###
 GET https://cse-341-69ih.onrender.com/Contacts/678c298d9c5387129f34ec0d
 ###
 GET https://cse-341-69ih.onrender.com/Contacts/678c29a29c5387129f34ec0e
 ###
 GET https://cse-341-69ih.onrender.com/Contacts/678c53ea9c5387129f34ec0f
+###
+POST https://cse-341-69ih.onrender.com/Contacts HTTP/1.1
+content-type: application/json 
+
+{
+"firstName": "Stephen", 
+"lastName": "Port", 
+"email": "Stephen.Port@gmail.com", 
+"favoriteColor": "Blue", 
+"birthday": "10/08/97"
+}
+###
+PUT https://cse-341-69ih.onrender.com/Contacts/67958ba3653595b96791990f HTTP/1.1
+content-type: application/json
+
+{
+"firstName": "John", 
+"lastName": "Carter", 
+"email": "Stephen.Port@gmail.com", 
+"favoriteColor": " blue", 
+"birthday": "10/08/97"
+}
+###
+DELETE https://cse-341-69ih.onrender.com/Contacts/67958ba3653595b96791990f HTTP/1.1
+###
