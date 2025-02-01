@@ -25,7 +25,7 @@ content-type: application/json
     "birthday":"06/19/2000"
 }
 ###
-PUT http://localhost:8080/Contacts/679590a4c65149d22b79a229 HTTP/1.1
+PUT http://localhost:8080/Contacts/67959fe5d6d08de62b221329 HTTP/1.1
 content-type: application/json 
 
 {    
@@ -36,7 +36,7 @@ content-type: application/json
     "birthday":"06/19/2000"
 }
 ###
-DELETE http://localhost:8080/Contacts/67958e61fb22af1831834aa0 HTTP/1.1
+DELETE http://localhost:8080/Contacts/67959fe5d6d08de62b221329 HTTP/1.1
 ###
 //Production
 
@@ -55,22 +55,22 @@ content-type: application/json
 
 {
 "firstName": "Stephen", 
-"lastName": "Port", 
-"email": "Stephen.Port@gmail.com", 
-"favoriteColor": "Blue", 
-"birthday": "10/08/97"
+"lastName": "king", 
+"email": "horrorking@gmail.com", 
+"favoriteColor": "red", 
+"birthday": "10/31/67"
 }
 ###
-PUT https://cse-341-69ih.onrender.com/Contacts/67958ba3653595b96791990f HTTP/1.1
+PUT https://cse-341-69ih.onrender.com/Contacts/6795a13ff72af2b733ce5a63 HTTP/1.1
 content-type: application/json
 
 {
 "firstName": "John", 
 "lastName": "Carter", 
-"email": "Stephen.Port@gmail.com", 
+"email": "carterofearth@gmail.com", 
 "favoriteColor": " blue", 
-"birthday": "10/08/97"
+"birthday": "07/08/47"
 }
 ###
-DELETE https://cse-341-69ih.onrender.com/Contacts/67958ba3653595b96791990f HTTP/1.1
+DELETE https://cse-341-69ih.onrender.com/Contacts/6795a13ff72af2b733ce5a63 HTTP/1.1
 ###
