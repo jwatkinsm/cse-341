@@ -3,7 +3,7 @@ const ObjectId = require('mongodb').ObjectId; // Ensure you import ObjectId
 
 const getAll = async (req, res, next) => {
 	const result = await mongodb.getDb().db().collection('contacts').find();
-	result.toArray().then((lists) => {
+	result.toArray().then((err, lists) => {
 		if (err) {
 			res.status(400).json({ message: err });
 		}
@@ -13,18 +13,21 @@ const getAll = async (req, res, next) => {
 };
 
 const getSingle = async (req, res, next) => {
-	const userId = new ObjectId(req.params.id); // Convert the string ID to an ObjectId
+	if (!ObjectId.isValid(req.params.id)) {
+		res.status(400).json('Must use a valid contact id to find a contact.');
+	}
+	const userId = new ObjectId(req.params.id);
 	const result = await mongodb
 		.getDb()
 		.db()
 		.collection('contacts')
 		.find({ _id: userId });
-	result.toArray().then((lists) => {
+	result.toArray().then((err, result) => {
 		if (err) {
-			res.status(400).json({ message: 'must be a valid id' });
+			res.status(400).json({ message: err });
 		}
 		res.setHeader('Content-Type', 'application/json');
-		res.status(200).json(lists[0]);
+		res.status(200).json(result[0]);
 	});
 };
 
