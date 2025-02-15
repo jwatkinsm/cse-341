@@ -4,6 +4,9 @@ const ObjectId = require('mongodb').ObjectId; // Ensure you import ObjectId
 const getAll = async (req, res, next) => {
 	const result = await mongodb.getDb().db().collection('contacts').find();
 	result.toArray().then((lists) => {
+		if (err) {
+			res.status(400).json({ message: err });
+		}
 		res.setHeader('Content-Type', 'application/json');
 		res.status(200).json(lists);
 	});
@@ -17,6 +20,9 @@ const getSingle = async (req, res, next) => {
 		.collection('contacts')
 		.find({ _id: userId });
 	result.toArray().then((lists) => {
+		if (err) {
+			res.status(400).json({ message: 'must be a valid id' });
+		}
 		res.setHeader('Content-Type', 'application/json');
 		res.status(200).json(lists[0]);
 	});
